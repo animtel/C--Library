@@ -17,3 +17,22 @@ C:\Users\lld\documents\visual studio 2017\Projects\CourseProjectOOP\CourseProjec
 C:\Users\lld\documents\visual studio 2017\Projects\CourseProjectOOP\CourseProjectOOP\obj\Debug\AxInterop.AcroPDFLib.dll
 C:\Users\lld\documents\visual studio 2017\Projects\CourseProjectOOP\CourseProjectOOP\obj\Debug\CourseProjectOOP.csproj.ResolveComReference.cache
 C:\Users\lld\documents\visual studio 2017\Projects\CourseProjectOOP\CourseProjectOOP\obj\Debug\CourseProjectOOP.PDFBookReader.resources
+C:\Users\lld\Desktop\GitHub\C-CourseProject\CourseProjectOOP\bin\Debug\CourseProjectOOP.exe.config
+C:\Users\lld\Desktop\GitHub\C-CourseProject\CourseProjectOOP\bin\Debug\CourseProjectOOP.exe
+C:\Users\lld\Desktop\GitHub\C-CourseProject\CourseProjectOOP\bin\Debug\CourseProjectOOP.pdb
+C:\Users\lld\Desktop\GitHub\C-CourseProject\CourseProjectOOP\bin\Debug\Interop.AcroPDFLib.dll
+C:\Users\lld\Desktop\GitHub\C-CourseProject\CourseProjectOOP\bin\Debug\AxInterop.AcroPDFLib.dll
+C:\Users\lld\Desktop\GitHub\C-CourseProject\CourseProjectOOP\obj\Debug\CourseProjectOOP.csprojResolveAssemblyReference.cache
+C:\Users\lld\Desktop\GitHub\C-CourseProject\CourseProjectOOP\obj\Debug\Interop.AcroPDFLib.dll
+C:\Users\lld\Desktop\GitHub\C-CourseProject\CourseProjectOOP\obj\Debug\AxInterop.AcroPDFLib.dll
+C:\Users\lld\Desktop\GitHub\C-CourseProject\CourseProjectOOP\obj\Debug\CourseProjectOOP.csproj.ResolveComReference.cache
+C:\Users\lld\Desktop\GitHub\C-CourseProject\CourseProjectOOP\obj\Debug\CourseProjectOOP.ChangeBook.resources
+C:\Users\lld\Desktop\GitHub\C-CourseProject\CourseProjectOOP\obj\Debug\CourseProjectOOP.Delete.resources
+C:\Users\lld\Desktop\GitHub\C-CourseProject\CourseProjectOOP\obj\Debug\CourseProjectOOP.Form1.resources
+C:\Users\lld\Desktop\GitHub\C-CourseProject\CourseProjectOOP\obj\Debug\CourseProjectOOP.Form2.resources
+C:\Users\lld\Desktop\GitHub\C-CourseProject\CourseProjectOOP\obj\Debug\CourseProjectOOP.PDFBookReader.resources
+C:\Users\lld\Desktop\GitHub\C-CourseProject\CourseProjectOOP\obj\Debug\CourseProjectOOP.Properties.Resources.resources
+C:\Users\lld\Desktop\GitHub\C-CourseProject\CourseProjectOOP\obj\Debug\CourseProjectOOP.Tree.resources
+C:\Users\lld\Desktop\GitHub\C-CourseProject\CourseProjectOOP\obj\Debug\CourseProjectOOP.csproj.GenerateResource.Cache
+C:\Users\lld\Desktop\GitHub\C-CourseProject\CourseProjectOOP\obj\Debug\CourseProjectOOP.exe
+C:\Users\lld\Desktop\GitHub\C-CourseProject\CourseProjectOOP\obj\Debug\CourseProjectOOP.pdb

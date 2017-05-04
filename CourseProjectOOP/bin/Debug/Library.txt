@@ -1,6 +1,1 @@
-1,1,1,1234,Fantasy,11,True
-1,1,1,1,Romans,1,True
-2,qwer,qwer,1234,Romans,11,True
-3,qwer,qwer,1234,Fantasy,12,True
-4,1,1,1234,Romans,1,True
-5,qwer,qwer,1234,Fantasy,1,True
+1,Толстой,Война и Мир том 1,1869,Romans,8,True

@@ -41,9 +41,9 @@ namespace CourseProjectOOP
             {
                 string newAllBooks = $"{Convert.ToString(dat.id)},{dat.autor},{dat.nameOfBook},{Convert.ToString(dat.year)},{dat.genre},{Convert.ToString(dat.valuetion)},{dat.Available}\r\n";
                 File.AppendAllText("Library.txt", newAllBooks);
-                
-
             }
+
+
         }
 
         public void Proverka()
@@ -229,6 +229,19 @@ namespace CourseProjectOOP
             {
                 textBox6.Text = "";
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.ShowDialog();
+            //File.Move(openFileDialog1.FileName, $"Library/{Genre}");
+            DirectoryInfo dir = new DirectoryInfo(openFileDialog1.FileName);
+            dir.MoveTo($"Library/Fantasy");
         }
     }
 }
