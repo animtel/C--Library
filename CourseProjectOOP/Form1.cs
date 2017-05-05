@@ -21,6 +21,10 @@ namespace CourseProjectOOP
         public double ang1 = Math.PI / 4;
         public double ang2 = Math.PI / 6;
 
+        public int index { get; set; }
+        public int IdOfBook { get; set; }
+        public string GenreOfBook { get; set; }
+
         private void Form1_Load(object sender, EventArgs e)
         {
             map = new Bitmap(pictureBox1.Width, pictureBox1.Height);
@@ -53,10 +57,7 @@ namespace CourseProjectOOP
             return 0;
         }
         //*******************************************************************************************************************************
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         public bool flag = true;
         
@@ -477,7 +478,7 @@ namespace CourseProjectOOP
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            
         }
 
         private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
@@ -489,6 +490,8 @@ namespace CourseProjectOOP
         {
 
         }
+
+        
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -502,8 +505,26 @@ namespace CourseProjectOOP
 
         private void button1_Click(object sender, EventArgs e)
         {
-            PDFBookReader reader = new PDFBookReader();
-            reader.Show();
+            int ind = index;
+            int Id = IdOfBook;
+            string Genre = GenreOfBook;
+            if (ind != null)
+            {
+                PDFBookReader reader = new PDFBookReader(ind, Id, Genre);
+                reader.Show();
+            }
+            else
+            {
+                MessageBox.Show("Вы не выбрали книгу!");
+            }
+            
+        }
+
+        private void dataGridView1_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            index = e.RowIndex;
+            IdOfBook = Convert.ToInt32(dataGridView1.Rows[index].Cells[0].Value);
+            GenreOfBook = Convert.ToString(dataGridView1.Rows[index].Cells[4].Value);
         }
     }
 }

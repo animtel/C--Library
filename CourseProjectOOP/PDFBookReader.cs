@@ -12,9 +12,24 @@ namespace CourseProjectOOP
 {
     public partial class PDFBookReader : Form
     {
-        public PDFBookReader()
+        public int index { get; set; }
+        public int Id { get; set; }
+        public string Genre { get; set; }
+
+        public PDFBookReader(int ind, int id, string genre)
         {
             InitializeComponent();
+            this.index = ind;
+            this.Id = id;
+            this.Genre = genre;
+            //axAcroPDF1.src = @"Library\" + Genre + @"\" + Id + ".pdf";
+            axAcroPDF1.LoadFile(@"Library\" + Genre + @"\" + Id + ".pdf");
+
+        }
+
+        private void PDFBookReader_Load(object sender, EventArgs e)
+        {
+
         }
 
         private void exitToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -22,21 +37,9 @@ namespace CourseProjectOOP
             this.Close();
         }
 
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            openFileDialog1.ShowDialog();
-            axAcroPDF1.src = openFileDialog1.FileName;
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
-            openFileDialog1.ShowDialog();
-            axAcroPDF1.src = openFileDialog1.FileName;
-        }
-
-        private void axAcroPDF1_Enter(object sender, EventArgs e)
-        {
-
+            this.Close();
         }
     }
 }

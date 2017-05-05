@@ -21,6 +21,7 @@ namespace CourseProjectOOP
         public string Genre { get; set; }
         public string Valuetion { get; set; }
         public string Available { get; set; }
+        public string pathOfFile { get; set; }
         public void AddBook()
         {
             string[] library = File.ReadAllLines("Library.txt");
@@ -42,6 +43,7 @@ namespace CourseProjectOOP
                 string newAllBooks = $"{Convert.ToString(dat.id)},{dat.autor},{dat.nameOfBook},{Convert.ToString(dat.year)},{dat.genre},{Convert.ToString(dat.valuetion)},{dat.Available}\r\n";
                 File.AppendAllText("Library.txt", newAllBooks);
             }
+            File.Move(pathOfFile, @"Library\" + comboBox1.Text + @"\" + textBox1.Text + ".pdf");
 
 
         }
@@ -64,6 +66,7 @@ namespace CourseProjectOOP
             bool flagId = true;
             bool flagYear = true;
             bool flagVal = true;
+            bool flagFile = true;
 
             
             
@@ -113,7 +116,17 @@ namespace CourseProjectOOP
 
             Available = comboBox2.Text;
 
-            if (flagId && flagName && flagYear && flagVal)
+            
+            //openFileDialog1.ShowDialog();
+            //pathOfFile = openFileDialog1.FileName;
+            //textBox4.Text = openFileDialog1.FileName;
+            if(pathOfFile == "")
+            {
+                flagFile = false;
+            }
+
+
+            if (flagId && flagName && flagYear && flagVal && flagFile)
             {
                 AddBook();
             }
@@ -238,10 +251,16 @@ namespace CourseProjectOOP
 
         private void button3_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
             openFileDialog1.ShowDialog();
-            //File.Move(openFileDialog1.FileName, $"Library/{Genre}");
-            DirectoryInfo dir = new DirectoryInfo(openFileDialog1.FileName);
-            dir.MoveTo($"Library/Fantasy");
+            pathOfFile = openFileDialog1.FileName;
+            //File.Move(openFileDialog1.FileName, @"Library\"+ comboBox1.Text+@"\" +textBox1.Text +".pdf");
+            //DirectoryInfo dir = new DirectoryInfo(openFileDialog1.FileName);
+            //dir.MoveTo($"Library/Fantasy");
         }
     }
 }
