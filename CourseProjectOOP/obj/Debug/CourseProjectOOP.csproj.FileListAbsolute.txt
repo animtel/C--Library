@@ -28,11 +28,11 @@ C:\Users\lld\Desktop\GitHub\C-CourseProject\CourseProjectOOP\obj\Debug\AxInterop
 C:\Users\lld\Desktop\GitHub\C-CourseProject\CourseProjectOOP\obj\Debug\CourseProjectOOP.csproj.ResolveComReference.cache
 C:\Users\lld\Desktop\GitHub\C-CourseProject\CourseProjectOOP\obj\Debug\CourseProjectOOP.ChangeBook.resources
 C:\Users\lld\Desktop\GitHub\C-CourseProject\CourseProjectOOP\obj\Debug\CourseProjectOOP.Delete.resources
-C:\Users\lld\Desktop\GitHub\C-CourseProject\CourseProjectOOP\obj\Debug\CourseProjectOOP.Form1.resources
-C:\Users\lld\Desktop\GitHub\C-CourseProject\CourseProjectOOP\obj\Debug\CourseProjectOOP.Form2.resources
 C:\Users\lld\Desktop\GitHub\C-CourseProject\CourseProjectOOP\obj\Debug\CourseProjectOOP.PDFBookReader.resources
 C:\Users\lld\Desktop\GitHub\C-CourseProject\CourseProjectOOP\obj\Debug\CourseProjectOOP.Properties.Resources.resources
 C:\Users\lld\Desktop\GitHub\C-CourseProject\CourseProjectOOP\obj\Debug\CourseProjectOOP.Tree.resources
 C:\Users\lld\Desktop\GitHub\C-CourseProject\CourseProjectOOP\obj\Debug\CourseProjectOOP.csproj.GenerateResource.Cache
 C:\Users\lld\Desktop\GitHub\C-CourseProject\CourseProjectOOP\obj\Debug\CourseProjectOOP.exe
 C:\Users\lld\Desktop\GitHub\C-CourseProject\CourseProjectOOP\obj\Debug\CourseProjectOOP.pdb
+C:\Users\lld\Desktop\GitHub\C-CourseProject\CourseProjectOOP\obj\Debug\CourseProjectOOP.MainView.resources
+C:\Users\lld\Desktop\GitHub\C-CourseProject\CourseProjectOOP\obj\Debug\CourseProjectOOP.Add.resources

@@ -28,37 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.ChooseDel = new System.Windows.Forms.ComboBox();
+            this.texValue = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // comboBox1
+            // ChooseDel
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.ChooseDel.FormattingEnabled = true;
+            this.ChooseDel.Items.AddRange(new object[] {
             "Delete by id",
             "Delete by autor",
             "Delete by name of book",
             "Delete by year",
             "Delete by genre",
             "Delete by valuetion"});
-            this.comboBox1.Location = new System.Drawing.Point(13, 13);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(284, 21);
-            this.comboBox1.TabIndex = 0;
-            this.comboBox1.Text = "Choose how do you want delete";
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.ChooseDel.Location = new System.Drawing.Point(13, 13);
+            this.ChooseDel.Name = "ChooseDel";
+            this.ChooseDel.Size = new System.Drawing.Size(284, 21);
+            this.ChooseDel.TabIndex = 0;
+            this.ChooseDel.Text = "Choose how do you want delete";
+            this.ChooseDel.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // textBox1
+            // texValue
             // 
-            this.textBox1.Location = new System.Drawing.Point(13, 41);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(284, 20);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.Text = "Enter your value";
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.texValue.Location = new System.Drawing.Point(13, 41);
+            this.texValue.Name = "texValue";
+            this.texValue.Size = new System.Drawing.Size(284, 20);
+            this.texValue.TabIndex = 1;
+            this.texValue.Text = "Enter your value";
+            this.texValue.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // button1
             // 
@@ -85,8 +85,8 @@
             this.ClientSize = new System.Drawing.Size(309, 112);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.texValue);
+            this.Controls.Add(this.ChooseDel);
             this.Name = "Delete";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Delete";
@@ -97,8 +97,8 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox ChooseDel;
+        private System.Windows.Forms.TextBox texValue;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
     }

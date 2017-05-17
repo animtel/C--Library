@@ -19,6 +19,7 @@ namespace CourseProjectOOP
         public PDFBookReader(int ind, int id, string genre)
         {
             InitializeComponent();
+            splitContainer1.Panel1.Hide();
             this.index = ind;
             this.Id = id;
             this.Genre = genre;
@@ -39,7 +40,12 @@ namespace CourseProjectOOP
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            
+        }
+
+        private void axAcroPDF1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -1,1 +1,5 @@
 1,Толстой,Война и Мир том 1,1869,Romans,8,True
+2,test,Qwerty,1234,Fantasy,1,True
+12,Йцук,Йцук,1111,Romans,2,False
+3,Автор,Книга,1254,Childrens lit,4,True
+5,йцу,йцук,1234,Romans,6,True

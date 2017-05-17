@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CourseProjectOOP.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +14,7 @@ namespace CourseProjectOOP
 {
     public partial class ChangeBook : Form
     {
+        ListOfBooks list = new ListOfBooks();
         public int indexOfRows { get; set; }
         public ChangeBook(int index)
         {
@@ -131,8 +133,8 @@ namespace CourseProjectOOP
         private void button1_Click_1(object sender, EventArgs e)
         {
             changebook();
-            Form1 form1 = new Form1();
-            form1.ShowAllBooks();
+            MainView form1 = new MainView();
+            list.ShowAllBooks();
             Close();
 
         }
