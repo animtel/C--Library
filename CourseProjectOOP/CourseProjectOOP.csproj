@@ -46,58 +46,58 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\Books.cs" />
-    <Compile Include="ChangeBook.cs">
+    <Compile Include="View\ChangeBook.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ChangeBook.Designer.cs">
+    <Compile Include="View\ChangeBook.Designer.cs">
       <DependentUpon>ChangeBook.cs</DependentUpon>
     </Compile>
-    <Compile Include="Delete.cs">
+    <Compile Include="View\Delete.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Delete.Designer.cs">
+    <Compile Include="View\Delete.Designer.cs">
       <DependentUpon>Delete.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainView.cs">
+    <Compile Include="Controller\MainView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainView.Designer.cs">
+    <Compile Include="Controller\MainView.Designer.cs">
       <DependentUpon>MainView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Add.cs">
+    <Compile Include="View\Add.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Add.Designer.cs">
+    <Compile Include="View\Add.Designer.cs">
       <DependentUpon>Add.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\ListOfBooks.cs" />
-    <Compile Include="PDFBookReader.cs">
+    <Compile Include="View\PDFBookReader.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PDFBookReader.Designer.cs">
+    <Compile Include="View\PDFBookReader.Designer.cs">
       <DependentUpon>PDFBookReader.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tree.cs">
+    <Compile Include="View\Tree.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tree.Designer.cs">
+    <Compile Include="View\Tree.Designer.cs">
       <DependentUpon>Tree.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ChangeBook.resx">
+    <EmbeddedResource Include="View\ChangeBook.resx">
       <DependentUpon>ChangeBook.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Delete.resx">
+    <EmbeddedResource Include="View\Delete.resx">
       <DependentUpon>Delete.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainView.resx">
+    <EmbeddedResource Include="Controller\MainView.resx">
       <DependentUpon>MainView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Add.resx">
+    <EmbeddedResource Include="View\Add.resx">
       <DependentUpon>Add.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PDFBookReader.resx">
+    <EmbeddedResource Include="View\PDFBookReader.resx">
       <DependentUpon>PDFBookReader.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -109,7 +109,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Tree.resx">
+    <EmbeddedResource Include="View\Tree.resx">
       <DependentUpon>Tree.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
@@ -144,9 +144,6 @@
       <Isolated>False</Isolated>
     </COMReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controller\" />
-    <Folder Include="View\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
