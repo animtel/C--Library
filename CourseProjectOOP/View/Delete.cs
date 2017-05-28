@@ -1,4 +1,4 @@
-﻿using CourseProjectOOP.Model;
+﻿using LiteLibrary.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,11 +10,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CourseProjectOOP
+namespace LiteLibrary
 {
     public partial class Delete : Form
     {
-        ListOfBooks list = new ListOfBooks(); // list of book`s methods
+        ListOfBooks list = new ListOfBooks();
         public Delete()
         {
             InitializeComponent();
@@ -27,31 +27,44 @@ namespace CourseProjectOOP
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string WhatAreYouWantToDelete = textChoose.Text;
-            switch (WhatAreYouWantToDelete)
+            string message = "Вы дейсвтиетельно хотите удалить унигу?";
+            string caption = "Deleting";
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult result = MessageBox.Show(message, caption, buttons);
+            if (result == DialogResult.Yes)
             {
-                case "Delete by id":
-                    list.DeleteBookById(textChoose.Text);
-                    break;
-                case "Delete by autor":
-                    list.DeleteBookByAutor(textChoose.Text);
-                    break;
-                case "Delete by name of book":
-                    list.DeleteBookByNameOfBook(textChoose.Text);
-                    break;
-                case "Delete by year":
-                    list.DeleteBookByYear(textChoose.Text);
-                    break;
-                case "Delete by genre":
-                    list.DeleteBookByGenre(textChoose.Text);
-                    break;
-                case "Delete by valuetion":
-                    list.DeleteBookByValuetion(textChoose.Text);
-                    break;
-                default:
-                    label1.Text = "Вы ввели неверное значение!\r\n";
-                    break;
+                string WhatAreYouWantToDelete = combotextChoose.Text;
+                string val = texValue.Text;
+                switch (WhatAreYouWantToDelete)
+                {
+                    case "Delete by id":
+                        list.DeleteBookById(val);
+                        break;
+                    case "Delete by autor":
+                        list.DeleteBookByAutor(val);
+                        break;
+                    case "Delete by name of book":
+                        list.DeleteBookByNameOfBook(val);
+                        break;
+                    case "Delete by year":
+                        list.DeleteBookByYear(val);
+                        break;
+                    case "Delete by genre":
+                        list.DeleteBookByGenre(val);
+                        break;
+                    case "Delete by valuetion":
+                        list.DeleteBookByValuetion(val);
+                        break;
+                    default:
+                        label1.Text = "Вы ввели неверное значение!\r\n";
+                        break;
+                }
+                this.Close();
             }
-        } // switch for calling method from list`s methods.
+            else
+            {
+                this.Close();
+            }
+        }
     }
 }

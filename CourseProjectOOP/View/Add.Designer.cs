@@ -1,4 +1,4 @@
-﻿namespace CourseProjectOOP
+﻿namespace LiteLibrary
 {
     partial class Add
     {
@@ -28,21 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.TBId = new System.Windows.Forms.TextBox();
+            this.TBAutor = new System.Windows.Forms.TextBox();
+            this.TBNameBook = new System.Windows.Forms.TextBox();
+            this.TBYear = new System.Windows.Forms.TextBox();
+            this.butAddBook = new System.Windows.Forms.Button();
+            this.CBVal = new System.Windows.Forms.TextBox();
+            this.CBGenre = new System.Windows.Forms.ComboBox();
+            this.CBAvailable = new System.Windows.Forms.ComboBox();
+            this.labId = new System.Windows.Forms.Label();
+            this.labAut = new System.Windows.Forms.Label();
+            this.labNamOfBook = new System.Windows.Forms.Label();
+            this.labYear = new System.Windows.Forms.Label();
+            this.labGenre = new System.Windows.Forms.Label();
+            this.labVal = new System.Windows.Forms.Label();
+            this.labAvailable = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -52,159 +52,157 @@
             this.label14 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.butChooseFile = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox1
+            // TBId
             // 
-            this.textBox1.Location = new System.Drawing.Point(157, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(163, 20);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "Id";
-            this.textBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBox1_MouseClick);
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.TBId.Location = new System.Drawing.Point(157, 12);
+            this.TBId.Name = "TBId";
+            this.TBId.Size = new System.Drawing.Size(163, 20);
+            this.TBId.TabIndex = 0;
+            this.TBId.Text = "Id";
+            this.TBId.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBox1_MouseClick);
             // 
-            // textBox2
+            // TBAutor
             // 
-            this.textBox2.Location = new System.Drawing.Point(157, 56);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(163, 20);
-            this.textBox2.TabIndex = 1;
-            this.textBox2.Text = "Autor";
-            this.textBox2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBox2_MouseClick);
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.TBAutor.Location = new System.Drawing.Point(157, 56);
+            this.TBAutor.Name = "TBAutor";
+            this.TBAutor.Size = new System.Drawing.Size(163, 20);
+            this.TBAutor.TabIndex = 1;
+            this.TBAutor.Text = "Autor";
+            this.TBAutor.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBox2_MouseClick);
+            this.TBAutor.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // textBox3
+            // TBNameBook
             // 
-            this.textBox3.Location = new System.Drawing.Point(157, 103);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(163, 20);
-            this.textBox3.TabIndex = 2;
-            this.textBox3.Text = "Name Of book";
-            this.textBox3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBox3_MouseClick);
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.TBNameBook.Location = new System.Drawing.Point(157, 103);
+            this.TBNameBook.Name = "TBNameBook";
+            this.TBNameBook.Size = new System.Drawing.Size(163, 20);
+            this.TBNameBook.TabIndex = 2;
+            this.TBNameBook.Text = "Name Of book";
+            this.TBNameBook.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBox3_MouseClick);
+            this.TBNameBook.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
-            // textBox4
+            // TBYear
             // 
-            this.textBox4.Location = new System.Drawing.Point(157, 153);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(163, 20);
-            this.textBox4.TabIndex = 3;
-            this.textBox4.Text = "Year";
-            this.textBox4.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBox4_MouseClick);
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.TBYear.Location = new System.Drawing.Point(157, 153);
+            this.TBYear.Name = "TBYear";
+            this.TBYear.Size = new System.Drawing.Size(163, 20);
+            this.TBYear.TabIndex = 3;
+            this.TBYear.Text = "Year";
+            this.TBYear.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBox4_MouseClick);
+            this.TBYear.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
-            // button1
+            // butAddBook
             // 
-            this.button1.Location = new System.Drawing.Point(245, 396);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Add Book";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.butAddBook.Location = new System.Drawing.Point(245, 396);
+            this.butAddBook.Name = "butAddBook";
+            this.butAddBook.Size = new System.Drawing.Size(75, 23);
+            this.butAddBook.TabIndex = 4;
+            this.butAddBook.Text = "Add Book";
+            this.butAddBook.UseVisualStyleBackColor = true;
+            this.butAddBook.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox6
+            // CBVal
             // 
-            this.textBox6.Location = new System.Drawing.Point(157, 258);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(163, 20);
-            this.textBox6.TabIndex = 6;
-            this.textBox6.Text = "Valuetion";
-            this.textBox6.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBox6_MouseClick);
-            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
+            this.CBVal.Location = new System.Drawing.Point(157, 258);
+            this.CBVal.Name = "CBVal";
+            this.CBVal.Size = new System.Drawing.Size(163, 20);
+            this.CBVal.TabIndex = 6;
+            this.CBVal.Text = "Valuetion";
+            this.CBVal.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBox6_MouseClick);
+            this.CBVal.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
-            // comboBox1
+            // CBGenre
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.CBGenre.FormattingEnabled = true;
+            this.CBGenre.Items.AddRange(new object[] {
             "Fantasy",
             "Romans",
             "Childrens lit",
             "Detectiv",
             "Mistic"});
-            this.comboBox1.Location = new System.Drawing.Point(157, 203);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(163, 21);
-            this.comboBox1.TabIndex = 9;
-            this.comboBox1.Text = "Genre";
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.CBGenre.Location = new System.Drawing.Point(157, 203);
+            this.CBGenre.Name = "CBGenre";
+            this.CBGenre.Size = new System.Drawing.Size(163, 21);
+            this.CBGenre.TabIndex = 9;
+            this.CBGenre.Text = "Genre";
             // 
-            // comboBox2
+            // CBAvailable
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.CBAvailable.FormattingEnabled = true;
+            this.CBAvailable.Items.AddRange(new object[] {
             "True",
             "False"});
-            this.comboBox2.Location = new System.Drawing.Point(157, 305);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(163, 21);
-            this.comboBox2.TabIndex = 10;
-            this.comboBox2.Text = "Available";
+            this.CBAvailable.Location = new System.Drawing.Point(157, 305);
+            this.CBAvailable.Name = "CBAvailable";
+            this.CBAvailable.Size = new System.Drawing.Size(163, 21);
+            this.CBAvailable.TabIndex = 10;
+            this.CBAvailable.Text = "Available";
             // 
-            // label1
+            // labId
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 13);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Enter ID of Book";
+            this.labId.AutoSize = true;
+            this.labId.Location = new System.Drawing.Point(16, 19);
+            this.labId.Name = "labId";
+            this.labId.Size = new System.Drawing.Size(86, 13);
+            this.labId.TabIndex = 11;
+            this.labId.Text = "Enter ID of Book";
             // 
-            // label2
+            // labAut
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 62);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 13);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "Enter Autor";
+            this.labAut.AutoSize = true;
+            this.labAut.Location = new System.Drawing.Point(16, 62);
+            this.labAut.Name = "labAut";
+            this.labAut.Size = new System.Drawing.Size(60, 13);
+            this.labAut.TabIndex = 12;
+            this.labAut.Text = "Enter Autor";
             // 
-            // label3
+            // labNamOfBook
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 109);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(103, 13);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "Enter Name of Book";
+            this.labNamOfBook.AutoSize = true;
+            this.labNamOfBook.Location = new System.Drawing.Point(16, 109);
+            this.labNamOfBook.Name = "labNamOfBook";
+            this.labNamOfBook.Size = new System.Drawing.Size(103, 13);
+            this.labNamOfBook.TabIndex = 13;
+            this.labNamOfBook.Text = "Enter Name of Book";
             // 
-            // label4
+            // labYear
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(16, 153);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 13);
-            this.label4.TabIndex = 14;
-            this.label4.Text = "Enter Year";
+            this.labYear.AutoSize = true;
+            this.labYear.Location = new System.Drawing.Point(16, 153);
+            this.labYear.Name = "labYear";
+            this.labYear.Size = new System.Drawing.Size(57, 13);
+            this.labYear.TabIndex = 14;
+            this.labYear.Text = "Enter Year";
             // 
-            // label5
+            // labGenre
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(16, 210);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(64, 13);
-            this.label5.TabIndex = 15;
-            this.label5.Text = "Enter Genre";
+            this.labGenre.AutoSize = true;
+            this.labGenre.Location = new System.Drawing.Point(16, 210);
+            this.labGenre.Name = "labGenre";
+            this.labGenre.Size = new System.Drawing.Size(64, 13);
+            this.labGenre.TabIndex = 15;
+            this.labGenre.Text = "Enter Genre";
             // 
-            // label6
+            // labVal
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(16, 264);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(78, 13);
-            this.label6.TabIndex = 16;
-            this.label6.Text = "Enter valuetion";
+            this.labVal.AutoSize = true;
+            this.labVal.Location = new System.Drawing.Point(16, 264);
+            this.labVal.Name = "labVal";
+            this.labVal.Size = new System.Drawing.Size(78, 13);
+            this.labVal.TabIndex = 16;
+            this.labVal.Text = "Enter valuetion";
             // 
-            // label7
+            // labAvailable
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(16, 312);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(78, 13);
-            this.label7.TabIndex = 17;
-            this.label7.Text = "Enter Available";
+            this.labAvailable.AutoSize = true;
+            this.labAvailable.Location = new System.Drawing.Point(16, 312);
+            this.labAvailable.Name = "labAvailable";
+            this.labAvailable.Size = new System.Drawing.Size(78, 13);
+            this.labAvailable.TabIndex = 17;
+            this.labAvailable.Text = "Enter Available";
             // 
             // label8
             // 
@@ -283,24 +281,23 @@
             this.button3.TabIndex = 26;
             this.button3.Text = "Choose PDF File";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button2
+            // butChooseFile
             // 
-            this.button2.Location = new System.Drawing.Point(19, 343);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(301, 47);
-            this.button2.TabIndex = 27;
-            this.button2.Text = "Choose file";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            this.butChooseFile.Location = new System.Drawing.Point(19, 343);
+            this.butChooseFile.Name = "butChooseFile";
+            this.butChooseFile.Size = new System.Drawing.Size(301, 47);
+            this.butChooseFile.TabIndex = 27;
+            this.butChooseFile.Text = "Choose file";
+            this.butChooseFile.UseVisualStyleBackColor = true;
+            this.butChooseFile.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // Add
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(329, 434);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.butChooseFile);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
@@ -309,25 +306,24 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.labAvailable);
+            this.Controls.Add(this.labVal);
+            this.Controls.Add(this.labGenre);
+            this.Controls.Add(this.labYear);
+            this.Controls.Add(this.labNamOfBook);
+            this.Controls.Add(this.labAut);
+            this.Controls.Add(this.labId);
+            this.Controls.Add(this.CBAvailable);
+            this.Controls.Add(this.CBGenre);
+            this.Controls.Add(this.CBVal);
+            this.Controls.Add(this.butAddBook);
+            this.Controls.Add(this.TBYear);
+            this.Controls.Add(this.TBNameBook);
+            this.Controls.Add(this.TBAutor);
+            this.Controls.Add(this.TBId);
             this.Name = "Add";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Adding book";
-            this.Load += new System.EventHandler(this.Add_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -335,21 +331,21 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox TBId;
+        private System.Windows.Forms.TextBox TBAutor;
+        private System.Windows.Forms.TextBox TBNameBook;
+        private System.Windows.Forms.TextBox TBYear;
+        private System.Windows.Forms.Button butAddBook;
+        private System.Windows.Forms.TextBox CBVal;
+        private System.Windows.Forms.ComboBox CBGenre;
+        private System.Windows.Forms.ComboBox CBAvailable;
+        private System.Windows.Forms.Label labId;
+        private System.Windows.Forms.Label labAut;
+        private System.Windows.Forms.Label labNamOfBook;
+        private System.Windows.Forms.Label labYear;
+        private System.Windows.Forms.Label labGenre;
+        private System.Windows.Forms.Label labVal;
+        private System.Windows.Forms.Label labAvailable;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
@@ -359,6 +355,6 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button butChooseFile;
     }
 }

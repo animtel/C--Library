@@ -1,4 +1,4 @@
-﻿using CourseProjectOOP.Model;
+﻿using LiteLibrary.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,9 +11,9 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CourseProjectOOP
+namespace LiteLibrary
 {
-    //lll
+    
     public partial class ChangeBook : Form
     {
         ListOfBooks list = new ListOfBooks();
@@ -49,14 +49,13 @@ namespace CourseProjectOOP
                 book.Add(new Books(Convert.ToInt32(newLib[0]), newLib[1], newLib[2], Convert.ToInt32(newLib[3]), newLib[4], Convert.ToInt32(newLib[5]), Convert.ToBoolean(newLib[6])));
             }
 
-            textBox1.Text = Convert.ToString(book[indexOfRows].id);
-            textBox2.Text = Convert.ToString(book[indexOfRows].autor);
-            textBox3.Text = Convert.ToString(book[indexOfRows].nameOfBook);
-            textBox4.Text = Convert.ToString(book[indexOfRows].year);
-            comboBox1.Text = Convert.ToString(book[indexOfRows].genre);
-            textBox6.Text = Convert.ToString(book[indexOfRows].valuetion);
-            comboBox2.Text = Convert.ToString(book[indexOfRows].Available);
-
+            TBAut.Text = Convert.ToString(book[indexOfRows].autor);
+            TBNameOfBook.Text = Convert.ToString(book[indexOfRows].nameOfBook);
+            TBYear.Text = Convert.ToString(book[indexOfRows].year);
+            CBGenre.Text = Convert.ToString(book[indexOfRows].genre);
+            TBVal.Text = Convert.ToString(book[indexOfRows].valuetion);
+            CBAvailable.Text = Convert.ToString(book[indexOfRows].Available);
+            Id = Convert.ToString(book[indexOfRows].id);
             pathOfFile = @"Library\" + Convert.ToString(book[indexOfRows].genre) + @"\" + Convert.ToString(book[indexOfRows].id) + ".pdf";
             
         }
@@ -75,13 +74,12 @@ namespace CourseProjectOOP
                 book.Add(new Books(Convert.ToInt32(newLib[0]), newLib[1], newLib[2], Convert.ToInt32(newLib[3]), newLib[4], Convert.ToInt32(newLib[5]), Convert.ToBoolean(newLib[6])));
             }
 
-            book[indexOfRows].id = Convert.ToInt32(textBox1.Text);
-            book[indexOfRows].autor = textBox2.Text;
-            book[indexOfRows].nameOfBook = textBox3.Text;
-            book[indexOfRows].year = Convert.ToInt32(textBox4.Text);
-            book[indexOfRows].genre = comboBox1.Text;
-            book[indexOfRows].valuetion = Convert.ToInt32(textBox6.Text);
-            book[indexOfRows].Available = Convert.ToBoolean(comboBox2.Text);
+            book[indexOfRows].autor = TBAut.Text;
+            book[indexOfRows].nameOfBook = TBNameOfBook.Text;
+            book[indexOfRows].year = Convert.ToInt32(TBYear.Text);
+            book[indexOfRows].genre = CBGenre.Text;
+            book[indexOfRows].valuetion = Convert.ToInt32(TBVal.Text);
+            book[indexOfRows].Available = Convert.ToBoolean(CBAvailable.Text);
 
             File.WriteAllText("Library.txt", "");
             foreach (Books dat in book)
@@ -89,18 +87,14 @@ namespace CourseProjectOOP
                 string newAllBooks = $"{Convert.ToString(dat.id)},{dat.autor},{dat.nameOfBook},{Convert.ToString(dat.year)},{dat.genre},{Convert.ToString(dat.valuetion)},{dat.Available}\r\n";
                 File.AppendAllText("Library.txt", newAllBooks);
             }
-            File.Move(pathOfFile, @"Library\" + comboBox1.Text + @"\" + textBox1.Text + ".pdf");
+            File.Move(pathOfFile, @"Library\" + CBGenre.Text + @"\" + Id + ".pdf");
 
 
         }
-        
-
-        
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            //Proverka();
-            changebook();
+            Proverka();
             MainView form1 = new MainView();
             list.ShowAllBooks();
             Close();
@@ -128,25 +122,12 @@ namespace CourseProjectOOP
             bool flagFile = true;
 
 
-
-            Id = textBox1.Text;
-            foreach (string str in library)
-            {
-                string[] newLib = str.Split(',');
-                if (Id == newLib[0])
-                {
-                    flagId = false;
-                    //label8.Text = "*";
-                }
-            }
-
-            Autor = textBox2.Text;
-            NameOfBook = textBox3.Text;
+            Autor = TBAut.Text;
+            NameOfBook = TBNameOfBook.Text;
 
             try
             {
                 Convert.ToInt32(Autor);
-                //label9.Text = "*";
                 flagName = false;
             }
             catch (Exception ex)
@@ -154,49 +135,35 @@ namespace CourseProjectOOP
                 flagName = true;
             }
 
-            Year = textBox4.Text;
+            Year = TBYear.Text;
             var regYear = new Regex("^[0-9]{4}$");
             if (!regYear.IsMatch(Year))
             {
-                //label11.Text = "*";
                 flagYear = false;
             }
 
-            Genre = comboBox1.Text;
+            Genre = CBGenre.Text;
 
-            Valuetion = textBox6.Text;
+            Valuetion = TBVal.Text;
             var regValuetion = new Regex("[0-9]{0,2}");
             if (!regValuetion.IsMatch(Valuetion))
             {
                 flagVal = false;
-                //label13.Text = "*";
-
             }
 
-            Available = comboBox2.Text;
+            Available = CBAvailable.Text;
 
-
-            //openFileDialog1.ShowDialog();
-            //pathOfFile = openFileDialog1.FileName;
-            //textBox4.Text = openFileDialog1.FileName;
-            if (pathOfFile == "")
-            {
-                flagFile = false;
-            }
-
-
-            if (flagId && flagName && flagYear && flagVal && flagFile)
+            if (flagId && flagName && flagYear && flagVal)
             {
                 changebook();
             }
             else
             {
                 MessageBox.Show("Вы ввели неверное значение!");
-
             }
-
         }
 
         bool flag = true;
+
     }
 }

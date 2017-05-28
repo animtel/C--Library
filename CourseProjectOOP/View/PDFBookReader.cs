@@ -7,8 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AxAcroPDFLib;
 
-namespace CourseProjectOOP
+namespace LiteLibrary
 {
     public partial class PDFBookReader : Form
     {
@@ -23,7 +24,6 @@ namespace CourseProjectOOP
             this.index = ind;
             this.Id = id;
             this.Genre = genre;
-            //axAcroPDF1.src = @"Library\" + Genre + @"\" + Id + ".pdf";
             axAcroPDF1.LoadFile(@"Library\" + Genre + @"\" + Id + ".pdf");
 
         }

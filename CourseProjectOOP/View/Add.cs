@@ -10,7 +10,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CourseProjectOOP
+namespace LiteLibrary
 {
     public partial class Add : Form
     {
@@ -43,7 +43,8 @@ namespace CourseProjectOOP
                 string newAllBooks = $"{Convert.ToString(dat.id)},{dat.autor},{dat.nameOfBook},{Convert.ToString(dat.year)},{dat.genre},{Convert.ToString(dat.valuetion)},{dat.Available}\r\n";
                 File.AppendAllText("Library.txt", newAllBooks);
             }
-            File.Move(pathOfFile, @"Library\" + comboBox1.Text + @"\" + textBox1.Text + ".pdf");
+            File.Move(pathOfFile, @"Library\" + CBGenre.Text + @"\" + TBId.Text + ".pdf");
+            
 
 
         }
@@ -70,7 +71,7 @@ namespace CourseProjectOOP
 
             
             
-            Id = textBox1.Text;
+            Id = TBId.Text;
             foreach (string str in library)
             {
                 string[] newLib = str.Split(',');
@@ -81,8 +82,8 @@ namespace CourseProjectOOP
                 }
             }
 
-            Autor = textBox2.Text;
-            NameOfBook = textBox3.Text;
+            Autor = TBAutor.Text;
+            NameOfBook = TBNameBook.Text;
             
             try
             {
@@ -95,7 +96,7 @@ namespace CourseProjectOOP
                 flagName = true;
             }
             
-            Year = textBox4.Text;
+            Year = TBYear.Text;
             var regYear = new Regex("^[0-9]{4}$");
             if (!regYear.IsMatch(Year))
             {
@@ -103,9 +104,9 @@ namespace CourseProjectOOP
                 flagYear = false;
             }
 
-            Genre = comboBox1.Text;
+            Genre = CBGenre.Text;
             
-            Valuetion = textBox6.Text;
+            Valuetion = CBVal.Text;
             var regValuetion = new Regex("[0-9]{0,2}");
             if (!regValuetion.IsMatch(Valuetion))
             {
@@ -114,7 +115,7 @@ namespace CourseProjectOOP
 
             }
 
-            Available = comboBox2.Text;
+            Available = CBAvailable.Text;
 
             
             //openFileDialog1.ShowDialog();
@@ -148,13 +149,10 @@ namespace CourseProjectOOP
         private void button1_Click(object sender, EventArgs e)
         {
             Proverka();
+            this.Close();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            //flag = false;
-
-        }
+        
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
@@ -174,98 +172,62 @@ namespace CourseProjectOOP
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void textBox6_TextChanged(object sender, EventArgs e)
         {
             flag = false;
         }
 
-        private void textBox7_TextChanged(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void textBox1_MouseClick(object sender, MouseEventArgs e)
         {
             flag = true;
-            if (textBox1.Focus() && flag)
+            if (TBId.Focus() && flag)
             {
-                textBox1.Text = "";
+                TBId.Text = "";
             }
         }
 
         private void textBox2_MouseClick(object sender, MouseEventArgs e)
         {
             flag = true;
-            if (textBox2.Focus() && flag)
+            if (TBAutor.Focus() && flag)
             {
-                textBox2.Text = "";
+                TBAutor.Text = "";
             }
         }
 
         private void textBox3_MouseClick(object sender, MouseEventArgs e)
         {
             flag = true;
-            if (textBox3.Focus() && flag)
+            if (TBNameBook.Focus() && flag)
             {
-                textBox3.Text = "";
+                TBNameBook.Text = "";
             }
         }
 
         private void textBox4_MouseClick(object sender, MouseEventArgs e)
         {
             flag = true;
-            if (textBox4.Focus() && flag)
+            if (TBYear.Focus() && flag)
             {
-                textBox4.Text = "";
+                TBYear.Text = "";
             }
         }
 
         private void textBox6_MouseClick(object sender, MouseEventArgs e)
         {
             flag = true;
-            if (textBox6.Focus() && flag)
+            if (CBVal.Focus() && flag)
             {
-                textBox6.Text = "";
+                CBVal.Text = "";
             }
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            
         }
 
         private void button2_Click_1(object sender, EventArgs e)
         {
             openFileDialog1.ShowDialog();
             pathOfFile = openFileDialog1.FileName;
-            //File.Move(openFileDialog1.FileName, @"Library\"+ comboBox1.Text+@"\" +textBox1.Text +".pdf");
-            //DirectoryInfo dir = new DirectoryInfo(openFileDialog1.FileName);
-            //dir.MoveTo($"Library/Fantasy");
-        }
-
-        private void Add_Load(object sender, EventArgs e)
-        {
 
         }
+
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace CourseProjectOOP
+﻿namespace LiteLibrary
 {
     partial class PDFBookReader
     {

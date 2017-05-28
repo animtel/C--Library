@@ -1,4 +1,4 @@
-﻿namespace CourseProjectOOP
+﻿namespace LiteLibrary
 {
     partial class ChangeBook
     {
@@ -28,106 +28,96 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.CBAvailable = new System.Windows.Forms.ComboBox();
+            this.CBGenre = new System.Windows.Forms.ComboBox();
+            this.TBVal = new System.Windows.Forms.TextBox();
+            this.butChange = new System.Windows.Forms.Button();
+            this.TBYear = new System.Windows.Forms.TextBox();
+            this.TBNameOfBook = new System.Windows.Forms.TextBox();
+            this.TBAut = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // comboBox2
+            // CBAvailable
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.CBAvailable.FormattingEnabled = true;
+            this.CBAvailable.Items.AddRange(new object[] {
             "True",
             "False"});
-            this.comboBox2.Location = new System.Drawing.Point(62, 308);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(163, 21);
-            this.comboBox2.TabIndex = 18;
-            this.comboBox2.Text = "Available";
+            this.CBAvailable.Location = new System.Drawing.Point(65, 261);
+            this.CBAvailable.Name = "CBAvailable";
+            this.CBAvailable.Size = new System.Drawing.Size(163, 21);
+            this.CBAvailable.TabIndex = 18;
+            this.CBAvailable.Text = "Available";
             // 
-            // comboBox1
+            // CBGenre
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.CBGenre.FormattingEnabled = true;
+            this.CBGenre.Items.AddRange(new object[] {
             "Fantasy",
             "Romans",
             "Childrens lit",
             "Detectiv",
             "Mistic"});
-            this.comboBox1.Location = new System.Drawing.Point(62, 206);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(163, 21);
-            this.comboBox1.TabIndex = 17;
-            this.comboBox1.Text = "Genre";
+            this.CBGenre.Location = new System.Drawing.Point(65, 159);
+            this.CBGenre.Name = "CBGenre";
+            this.CBGenre.Size = new System.Drawing.Size(163, 21);
+            this.CBGenre.TabIndex = 17;
+            this.CBGenre.Text = "Genre";
             // 
-            // textBox6
+            // TBVal
             // 
-            this.textBox6.Location = new System.Drawing.Point(62, 261);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(163, 20);
-            this.textBox6.TabIndex = 16;
-            this.textBox6.Text = "Valuetion";
+            this.TBVal.Location = new System.Drawing.Point(65, 214);
+            this.TBVal.Name = "TBVal";
+            this.TBVal.Size = new System.Drawing.Size(163, 20);
+            this.TBVal.TabIndex = 16;
+            this.TBVal.Text = "Valuetion";
             // 
-            // button1
+            // butChange
             // 
-            this.button1.Location = new System.Drawing.Point(150, 346);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "Change Book";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.butChange.Location = new System.Drawing.Point(153, 299);
+            this.butChange.Name = "butChange";
+            this.butChange.Size = new System.Drawing.Size(75, 23);
+            this.butChange.TabIndex = 15;
+            this.butChange.Text = "Change Book";
+            this.butChange.UseVisualStyleBackColor = true;
+            this.butChange.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // textBox4
+            // TBYear
             // 
-            this.textBox4.Location = new System.Drawing.Point(62, 156);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(163, 20);
-            this.textBox4.TabIndex = 14;
-            this.textBox4.Text = "Year";
+            this.TBYear.Location = new System.Drawing.Point(65, 109);
+            this.TBYear.Name = "TBYear";
+            this.TBYear.Size = new System.Drawing.Size(163, 20);
+            this.TBYear.TabIndex = 14;
+            this.TBYear.Text = "Year";
             // 
-            // textBox3
+            // TBNameOfBook
             // 
-            this.textBox3.Location = new System.Drawing.Point(62, 106);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(163, 20);
-            this.textBox3.TabIndex = 13;
-            this.textBox3.Text = "Name Of book";
+            this.TBNameOfBook.Location = new System.Drawing.Point(65, 59);
+            this.TBNameOfBook.Name = "TBNameOfBook";
+            this.TBNameOfBook.Size = new System.Drawing.Size(163, 20);
+            this.TBNameOfBook.TabIndex = 13;
+            this.TBNameOfBook.Text = "Name Of book";
             // 
-            // textBox2
+            // TBAut
             // 
-            this.textBox2.Location = new System.Drawing.Point(62, 59);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(163, 20);
-            this.textBox2.TabIndex = 12;
-            this.textBox2.Text = "Autor";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(62, 15);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(163, 20);
-            this.textBox1.TabIndex = 11;
-            this.textBox1.Text = "Id";
+            this.TBAut.Location = new System.Drawing.Point(65, 12);
+            this.TBAut.Name = "TBAut";
+            this.TBAut.Size = new System.Drawing.Size(163, 20);
+            this.TBAut.TabIndex = 12;
+            this.TBAut.Text = "Autor";
             // 
             // ChangeBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(295, 394);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(295, 344);
+            this.Controls.Add(this.CBAvailable);
+            this.Controls.Add(this.CBGenre);
+            this.Controls.Add(this.TBVal);
+            this.Controls.Add(this.butChange);
+            this.Controls.Add(this.TBYear);
+            this.Controls.Add(this.TBNameOfBook);
+            this.Controls.Add(this.TBAut);
             this.Name = "ChangeBook";
             this.Text = "ChangeBook";
             this.ResumeLayout(false);
@@ -137,13 +127,12 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox CBAvailable;
+        private System.Windows.Forms.ComboBox CBGenre;
+        private System.Windows.Forms.TextBox TBVal;
+        private System.Windows.Forms.Button butChange;
+        private System.Windows.Forms.TextBox TBYear;
+        private System.Windows.Forms.TextBox TBNameOfBook;
+        private System.Windows.Forms.TextBox TBAut;
     }
 }

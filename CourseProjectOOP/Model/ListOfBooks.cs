@@ -5,13 +5,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CourseProjectOOP.Model
+//1016331
+
+namespace LiteLibrary.Model
 {
     class ListOfBooks
     {
+        public string path { get; set; }
+        public string id { get; set; }
+        public string genre { get; set; }
 
         #region FindBook
-        //MainView search = new MainView();
         public List<Books> FindBookAsId(string id, string available)
         {
             string searchId = id;
@@ -157,23 +161,15 @@ namespace CourseProjectOOP.Model
             }
             return p;
         }
-        public List<Books> ShowAllBooks()
-        {
-            string[] library = File.ReadAllLines("Library.txt");
-
-            List<Books> book = new List<Books>();
-            foreach (string str in library)
-            {
-                string[] newLib = str.Split(',');
-
-                book.Add(new Books(Convert.ToInt32(newLib[0]), newLib[1], newLib[2], Convert.ToInt32(newLib[3]), newLib[4], Convert.ToInt32(newLib[5]), Convert.ToBoolean(newLib[6])));
-            }
-            return book;
-        }
+        
         #endregion
 
         #region DeleteBook
-
+        private void DeleteFileOfBooks(string id, string genre)
+        {
+            path = @"Library\" + genre+ @"\" + id + ".pdf";
+            File.Delete(path);
+        }
         public void DeleteBookById(string id)
         {
             string searchId = id;
@@ -189,17 +185,21 @@ namespace CourseProjectOOP.Model
                     book.Add(new Books(Convert.ToInt32(newLib[0]), newLib[1], newLib[2], Convert.ToInt32(newLib[3]), newLib[4], Convert.ToInt32(newLib[5]), Convert.ToBoolean(newLib[6])));
 
                 }
+                else
+                {
+                    DeleteFileOfBooks(newLib[0], newLib[4]);
+                }
             }
             File.WriteAllText("Library.txt", "");
             foreach (Books dat in book)
             {
+                
                 string newAllBooks = $"{Convert.ToString(dat.id)},{dat.autor},{dat.nameOfBook},{Convert.ToString(dat.year)},{dat.genre},{Convert.ToString(dat.valuetion)},{dat.Available}\r\n";
                 File.AppendAllText("Library.txt", newAllBooks);
 
 
             }
         }
-
         public void DeleteBookByAutor(string autor)
         {
             string searchAutor = autor;
@@ -215,6 +215,10 @@ namespace CourseProjectOOP.Model
                     book.Add(new Books(Convert.ToInt32(newLib[0]), newLib[1], newLib[2], Convert.ToInt32(newLib[3]), newLib[4], Convert.ToInt32(newLib[5]), Convert.ToBoolean(newLib[6])));
 
                 }
+                else
+                {
+                    DeleteFileOfBooks(newLib[0], newLib[4]);
+                }
             }
             File.WriteAllText("Library.txt", "");
             foreach (Books dat in book)
@@ -225,7 +229,6 @@ namespace CourseProjectOOP.Model
 
             }
         }
-
         public void DeleteBookByNameOfBook(string name)
         {
             string searchName = name;
@@ -241,6 +244,10 @@ namespace CourseProjectOOP.Model
                     book.Add(new Books(Convert.ToInt32(newLib[0]), newLib[1], newLib[2], Convert.ToInt32(newLib[3]), newLib[4], Convert.ToInt32(newLib[5]), Convert.ToBoolean(newLib[6])));
 
                 }
+                else
+                {
+                    DeleteFileOfBooks(newLib[0], newLib[4]);
+                }
             }
             File.WriteAllText("Library.txt", "");
             foreach (Books dat in book)
@@ -251,7 +258,6 @@ namespace CourseProjectOOP.Model
 
             }
         }
-
         public void DeleteBookByYear(string year)
         {
             string searchYear = year;
@@ -267,6 +273,10 @@ namespace CourseProjectOOP.Model
                     book.Add(new Books(Convert.ToInt32(newLib[0]), newLib[1], newLib[2], Convert.ToInt32(newLib[3]), newLib[4], Convert.ToInt32(newLib[5]), Convert.ToBoolean(newLib[6])));
 
                 }
+                else
+                {
+                    DeleteFileOfBooks(newLib[0], newLib[4]);
+                }
             }
             File.WriteAllText("Library.txt", "");
             foreach (Books dat in book)
@@ -277,7 +287,6 @@ namespace CourseProjectOOP.Model
 
             }
         }
-
         public void DeleteBookByGenre(string genre)
         {
             string searchGenre = genre;
@@ -293,6 +302,10 @@ namespace CourseProjectOOP.Model
                     book.Add(new Books(Convert.ToInt32(newLib[0]), newLib[1], newLib[2], Convert.ToInt32(newLib[3]), newLib[4], Convert.ToInt32(newLib[5]), Convert.ToBoolean(newLib[6])));
 
                 }
+                else
+                {
+                    DeleteFileOfBooks(newLib[0], newLib[4]);
+                }
             }
             File.WriteAllText("Library.txt", "");
             foreach (Books dat in book)
@@ -303,7 +316,6 @@ namespace CourseProjectOOP.Model
 
             }
         }
-
         public void DeleteBookByValuetion(string valuetion)
         {
             string searchValuetion = valuetion;
@@ -319,6 +331,10 @@ namespace CourseProjectOOP.Model
                     book.Add(new Books(Convert.ToInt32(newLib[0]), newLib[1], newLib[2], Convert.ToInt32(newLib[3]), newLib[4], Convert.ToInt32(newLib[5]), Convert.ToBoolean(newLib[6])));
 
                 }
+                else
+                {
+                    DeleteFileOfBooks(newLib[0], newLib[4]);
+                }
             }
             File.WriteAllText("Library.txt", "");
             foreach (Books dat in book)
@@ -329,7 +345,24 @@ namespace CourseProjectOOP.Model
 
             }
         }
-
         #endregion
+
+        #region ShowAllBooks
+        public List<Books> ShowAllBooks()
+        {
+            string[] library = File.ReadAllLines("Library.txt");
+
+            List<Books> book = new List<Books>();
+            foreach (string str in library)
+            {
+                string[] newLib = str.Split(',');
+
+                book.Add(new Books(Convert.ToInt32(newLib[0]), newLib[1], newLib[2], Convert.ToInt32(newLib[3]), newLib[4], Convert.ToInt32(newLib[5]), Convert.ToBoolean(newLib[6])));
+            }
+            return book;
+        }
+        #endregion
+
+        
     }
 }

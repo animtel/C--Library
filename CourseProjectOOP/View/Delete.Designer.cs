@@ -1,4 +1,4 @@
-﻿namespace CourseProjectOOP
+﻿namespace LiteLibrary
 {
     partial class Delete
     {
@@ -28,28 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textChoose = new System.Windows.Forms.ComboBox();
+            this.combotextChoose = new System.Windows.Forms.ComboBox();
             this.texValue = new System.Windows.Forms.TextBox();
             this.butSwitch = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // textChoose
+            // combotextChoose
             // 
-            this.textChoose.FormattingEnabled = true;
-            this.textChoose.Items.AddRange(new object[] {
+            this.combotextChoose.FormattingEnabled = true;
+            this.combotextChoose.Items.AddRange(new object[] {
             "Delete by id",
             "Delete by autor",
             "Delete by name of book",
             "Delete by year",
             "Delete by genre",
             "Delete by valuetion"});
-            this.textChoose.Location = new System.Drawing.Point(13, 13);
-            this.textChoose.Name = "textChoose";
-            this.textChoose.Size = new System.Drawing.Size(284, 21);
-            this.textChoose.TabIndex = 0;
-            this.textChoose.Text = "Choose how do you want delete";
-            this.textChoose.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.combotextChoose.Location = new System.Drawing.Point(13, 13);
+            this.combotextChoose.Name = "combotextChoose";
+            this.combotextChoose.Size = new System.Drawing.Size(284, 21);
+            this.combotextChoose.TabIndex = 0;
+            this.combotextChoose.Text = "Choose how do you want delete";
+            this.combotextChoose.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // texValue
             // 
@@ -85,7 +85,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.butSwitch);
             this.Controls.Add(this.texValue);
-            this.Controls.Add(this.textChoose);
+            this.Controls.Add(this.combotextChoose);
             this.Name = "Delete";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Delete";
@@ -96,7 +96,7 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox textChoose;
+        private System.Windows.Forms.ComboBox combotextChoose;
         private System.Windows.Forms.TextBox texValue;
         private System.Windows.Forms.Button butSwitch;
         private System.Windows.Forms.Label label1;
